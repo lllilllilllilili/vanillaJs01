@@ -1,0 +1,114 @@
+body {
+    background-color: #9b4fe8;
+}
+
+.contents{
+    margin-top: 35%;
+    text-align: center;
+}
+
+.form{
+    display:none;
+}
+
+.toDoColor{
+    color : rgb(255, 255, 255);
+}
+
+.timeColor{
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 80%;
+
+    -webkit-text-stroke: 1px #000;
+    text-align: center;
+    margin:auto;
+   
+    margin-bottom: 5%;
+    
+}
+
+.contents .js-toDoForm input {
+    width: 30%;
+    font-size: 200%;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid rgb(196, 196, 196);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.contents .js-form input{
+    width: 20%;
+    font-size: 200%;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.showing {
+    color: rgb(255, 255, 255);
+    border:none;
+    display: block;
+    margin-bottom: 2%;
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+    margin: 10px;
+}
+
+li span {
+    margin-right: 10px;
+}
+
+li button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 20px;
+}
+
+
+
+
+h4 {
+    font-size: 337.5%;
+    margin: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
+}
+
+::placeholder {
+    color: rgb(240, 250, 255);
+    -webkit-text-stroke: 1px rgb(37, 186, 255);
+    text-align: center;
+}
+
+body {
+    color: white;
+}
