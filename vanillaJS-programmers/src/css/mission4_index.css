@@ -1,0 +1,31 @@
+* { margin: 0; padding: 0; box-sizing: border-box; } 
+ nav { height: 60px; background-color: #4a4c88; } 
+ ul > li { display: inline-block; padding: 0 60px; } 
+ li > a { line-height: 60px; color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; list-style: none; cursor: pointer; opacity: 0.7; } 
+ li > a:hover { opacity: 1.0; } 
+ section { padding: 60px; } 
+ section > h1 { margin-bottom: 20px; } 
+
+input { width : 50%; height : 2.5rem; padding : 10px; } 
+
+button { width : 7vh; height : 4vh; border-radius: 20px; } 
+
+.app { /* 중앙정렬 */
+ margin : 0 auto; max-width: 800px; min-height : 100vh; padding : 2rem; width : 100%; } 
+
+ul { list-style: none; } 
+
+.user-list-wrapper { padding: 0.5rem 0; } 
+
+.user-trello { display : flex; gap : 10rem; } 
+
+.user-trello .user-trello-completed { width : 100vh; height : 100vh; } 
+
+.user-trello .user-trello-uncompleted { width : 100vh; height : 100vh; } 
+.user-list-wrapper .user-list { display: flex; flex-direction: row; flex-wrap: wrap; } 
+
+.user-list-wrapper .user-list .user-list-element { margin: 5px; padding: 4px 8px; 
+ font-size: 0.8rem; color: #333; border: 1px solid #ccc; border-radius: 5px; } 
+
+
+.user-list-wrapper .user-list .user-list-element.current { background-color: #ccc; color: #000; } 

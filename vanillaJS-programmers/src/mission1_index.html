@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>🍌 JS</title>
+  <link rel="stylesheet" href="css/mission1_index.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">File Directory</a></li>
+      <li><a href="index.html">Agenda</a></li>
+      <li><a href="mission1_index.html">1w / study</a></li>
+      <li><a href="mission2_index.html">2w / study</a></li>
+      <li><a href="mission3_index.html">3w / study</a></li>
+      <li><a href="mission4_index.html">4w / study</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h1>Mission1 과제</h1>
+    <b>요구사항</b><br><br>
+    <abbr><b>task1 - TodoList 컴포넌트 작성</b></abbr><br>
+    <div>
+        - <mark>function style의 문법</mark>, <mark>class style</mark>의 문법 어느 것을 사용해도 좋습니다.<br>
+        - <mark>new 키워드</mark>를 통해 생성해서 사용됩니다.<br>
+        - 파라메터로 아래와 같은 형태의 <mark>data</mark>를 넘겨받습니다.<br>
+    
+    <code>
+    var data = [ <br>
+    { <br>
+        text: 'JS 공부하기'<br>
+    },<br>
+    {<br>
+        text: 'JS 복습하기'<br>
+    }<br>
+    ]<br>
+    </code><br>
+    <mark>var todoList = new TodoList(data);</mark>와 같은 형태로 파라메터를 넘기고, 생성해서 사용합니다.<br>
+    해당 컴포넌트에 <mark>render</mark> 함수를 작성합니다.<br>
+    이 함수는 파라메터로 넘겨받은 data를 순회하며 각 배열첨자의 text를 html string으로 만든 뒤, <mark>todo-list</mark>라는 id를 가진 div에 <mark>innerHTML</mark>을 이용해 렌더링 되도록 합니다.<br>
+    이 함수는 별도의 파라메터 없이 <mark>todoList.render()</mark> 형태로 실행되도록 만듭니다.<br><br>
+
+    <abbr><b>task2 - 보너스 구현사항</b></abbr><br>
+    new 키워드로 함수의 인스턴스를 만들 때 올바른 파라메터가 넘어오지 않을 경우 에러 발생하게 하기<br>
+    null 혹은 undefined가 넘어오면?<br>
+    array가 아닌 형태로 넘어오면?<br>
+    데이터 내용이 이상하면?<br>
+    new 키워드 안 붙이고 함수 실행 시 에러 발생하게 하기<br>
+    function 형태의 선언인 경우에만 해당<br>
+    에러는 우선 에러를 내야하는 상황이 생기는 경우 <mark>throw new Error("error message") 문법을 사용해주세요.</mark><br>
+    </div>
+
+    <br><abbr><b>task3 - 다중 컴포넌트</b></abbr><br>
+    <abbr>html</abbr><br>
+    &lt;div id="todo-list"&gt;&lt;div&gt; 외의 다른 div를 두 개 더 html 코드에 만듭니다.<br>
+    div의 id는 적당한 이름으로 지어주세요.<br>
+    <abbr>js</abbr><br>
+    <mark>var data = [{ ... }] 외에 todo를 담고 있는 array data를 두 개 더 만듭니다.</mark><br>
+    todo의 내용은 본인의 현재 todo를 담아서 넣으면 더 좋겠죠?<br>
+    TodoList 컴포넌트를 총 세 개 만듭니다. 첫 번째 컴포넌트에는 제가 넣어둔 data와 #todo-list에 렌더링하고,<br> 나머지 두 개는 여러분이 추가하신 div + data를 활용해서 만들어주세요.<br>
+
+    <br><abbr><b>task4 - isCompleted 처리</b></abbr><br>
+    data의 각 object에 text외에 <mark>isCompleted 라는 필드를 추가합니다.</mark><br>
+    해당 값은 true, 혹은 false 값을 지정해주세요.<br>
+    <code>
+    var data = [<br>
+    { <br>
+        text: '코딩하기',<br>
+        isCompleted: true<br>
+    },<br>
+    {<br>
+        text: '집안 청소하기',<br>
+        isCompleted: false<br>
+    }<br>
+    ]<br>
+    </code><br>
+    TodoList 컴포넌트 내에 text 렌더링 시, isCompleted 값이 true인 경우 &lt;s&gt; 태그를 이용해 삭선처리를 해주는 걸 추가합니다.<br>
+
+
+    <br><abbr><b>task5 - setState</b></abbr><br>
+    TodoList 함수에 <mark>setState(nextData)</mark>라는 함수를 만듭니다.<br>
+    이 함수는 해당 컴포넌트 초기 생성 시 넘겼던 data 파라메터를 nextData로 대체하고 컴포넌트를 다시 렌더링합니다.<br>
+    해당 함수를 추가한 뒤, <mark>new TodoList(...)</mark> 하는 코드 이후에 해당 컴포넌트의 인스턴스에 <mark>todoList.setState(새로운 배열)</mark> 형태로 데이터만 다시 넣었을 때 컴포넌트가 다시 렌더링 되도록 작성해주세요.<br>
+    setState 함수 호출 후 다시 todoList.render()를 호출하는 것이 아니라, setState 함수 내에서 화면을 다시 렌더링하는 것까지 처리해야 합니다.<br>
+
+<br><b>수행화면</b>
+    <main id="app"><br></main>
+    <script src="./mission1/components/TodoList.js"></script>     
+  </section>
+</body>
+</html>

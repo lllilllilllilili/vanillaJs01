@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>🍌 JS</title>
+  <link rel="stylesheet" href="css/mission4_index.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">File Directory</a></li>
+      <li><a href="index.html">Agenda</a></li>
+      <li><a href="mission1_index.html">1w / study</a></li>
+      <li><a href="mission2_index.html">2w / study</a></li>
+      <li><a href="mission3_index.html">3w / study</a></li>
+      <li><a href="mission4_index.html">4w / study</a></li>
+    </ul>
+  </nav>
+  <section>
+    <h1>Mission4 과제</h1>
+    <b>요구사항</b><br>
+    <br><abbr><b>task1 - TodoList App 업그레이드하기 2</b></abbr><br>
+
+    <br><abbr><b>TodoApp에 API 연동하기</b></abbr><br>
+    <div>
+        이번에는 Mission1, Mission2에 했던 TodoApp에 제가 간단하게 만든 API를 연동하여 좀 더 생명력 있는 웹앱을 만들어보는 시간을 가져보겠습니다.
+    </div>
+
+    <br><abbr><b>API 사용법</b></abbr><br>
+    <div>
+        Missin 3에 했던 fetch를 통해 짤봇 데이터를 불러왔던 걸 기억하시나요? 이번에도 fetch를 이용해 Todo 목록 data를 불러오고, 특정 Todo를 삭제하고, 완료처리를 하는 것에 도전해봅니다.
+    </div>
+
+    <br><abbr><b>데이터 형태</b></abbr><br>
+    <code>
+        { <br>
+            "_id": 할 일의 고유값. 숫자와 문자가 섞여있는 문자로 되어있음, <br>
+            "content": 할 일 text, <br>
+            "isCompleted": 할 일의 완료여부 <br>
+          } <br>
+    </code>
+    <br><abbr><b>할 일 목록 불러오기</b></abbr><br>
+    <br><abbr><b>할 일 추가하기</b></abbr><br>
+    <br><abbr><b>할 일 삭제하기</b></abbr><br>
+    <br><abbr><b>특정 사용자의 할 일 전체 삭제하기</b></abbr><br>
+    <br><abbr><b>할 일 완료여부 토글하기</b></abbr><br>
+
+
+    <br><abbr><b>task2 - Users 컴포넌트</b></abbr>
+    <div>
+        - <mark>Users 컴포넌트를</mark> 만들어서 사용자 목록을 보여주고 특정 사용자를 클릭하여 그 사용자의 <mark>todos를</mark> 불러와서 화면에 뿌려지게 합니다. <br>
+        - 현재 뿌려진 todos가 누구의 todos인지 표시하는 부분이 들어가는 것도 좋겠죠? <br>
+    </div>  
+   
+    <br><abbr><b>task3 - API가 느린 경우의 인터랙션 처리</b></abbr><br>
+    <div>
+        - 리스트를 조회하는 <mark>API 뒤에 파라메터로 delay=숫자값을 넣으면</mark> 해당 숫자값만큼 API 결과가 지연 되어서 내려옵니다.
+        - 이것을 API에 delay를 줘서 일부러 느리게 만들고, 로딩 중임을 사용자에게 알리는 처리 및 오작동하지 않게 하는 각종 처리를 고안해봅니다.
+    </div>
+
+    <br><abbr><b>task4 - 미니 트렐로</b></abbr><br>
+    <div>
+        - <mark>TodoList 컴포넌트를 두개를 렌더링</mark> 합니다.
+        - 하나에는 isCompleted가 false인 todo 목록을, 하나에는 isCompleted가 true인 todo 목록을 뿌립니다.
+        - 드래그&드랍을 이용해 todo를 두 컴포넌트 사이에서 옮길 수 있게 만듭니다.
+        - 드래그를 통한 재정렬 등은 우선 신경쓰지 말고, TodoList간 옮길 수 있는 것을 신경 써서 처리합니다.
+    </div>
+
+<br><b>수행화면</b>
+
+
+<div class="app">
+    <input type="text" class="todo-input" />
+    <button type="button" class="add-todo-button">
+      Add
+    </button>
+    <div class="user-list-wrapper"></div>
+    <!-- <div id="todo-list"></div> -->
+    <div class="user-trello">
+      <ul class="user-trello-completed"></ul>
+      <ul class="user-trello-uncompleted"></ul>
+    </div>
+
+  </div>
+  <script src="../src/mission4/index.js" type="module"></script>   
+  </section>
+</body>
+</html>

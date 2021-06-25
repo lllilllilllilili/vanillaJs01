@@ -1,0 +1,34 @@
+* { margin: 0; padding: 0; box-sizing: border-box; } 
+ nav { height: 60px; background-color: #4a4c88; } 
+ ul > li { display: inline-block; padding: 0 60px; } 
+ li > a { line-height: 60px; color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; list-style: none; cursor: pointer; opacity: 0.7; } 
+ li > a:hover { opacity: 1.0; } 
+ section { padding: 60px; } 
+ section > h1 { margin-bottom: 20px; } 
+
+ 
+ .app { /* 중앙정렬 */
+ margin : 0 auto; max-width: 800px; min-height : 100vh; padding : 2rem; width : 100%; } 
+ 
+ .search-keryword-wapper input { width : 100%; height : 2.5rem; padding : 10px; } 
+ 
+ .search-result { width: 100%; display: grid; gap: 10px; grid-template-columns: repeat(4, calc(50% - 10rem)); } 
+ 
+ .gif-wrapper { padding : 1px; border: rgb(26, 26, 26) 1px solid; } 
+ 
+ /* grid 밑에 애들 이미지 */
+ .gif-wrapper img { width: 100%; height: 200px; object-fit: fill; } 
+ 
+ ul { list-style: none; } 
+ 
+ .search-history-wrapper { padding: 0.5rem 0; } 
+ 
+ .search-history-wrapper .search-history { display: flex; flex-direction: row; flex-wrap: wrap; } 
+ 
+ .search-history-wrapper .search-history .search-history-element { margin: 5px; padding: 4px 8px; font-size: 0.8rem; color: #333; border: 1px solid #ccc; border-radius: 5px; } 
+ 
+ .search-history-wrapper .search-history .search-history-element { margin: 5px; padding: 4px 8px; font-size: 0.8rem; color: #333; border: 1px solid #ccc; border-radius: 5px; } 
+ 
+ .search-history-wrapper .search-history .search-history-element:hover { opacity: 0.5; } 
+ 
+ .search-history-wrapper .search-history .search-history-element.current { background-color: #ccc; color: #000; } 
